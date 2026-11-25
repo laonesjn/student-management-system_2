@@ -22,6 +22,17 @@ const normalizeSearchValue = (value) => {
         .replace(/\s+/g, " ");
 };
 
+const formatLastLogin = (lastLoginAt) => {
+    if (!lastLoginAt) {
+        return "Never logged in";
+    }
+
+    const date = new Date(lastLoginAt);
+    return Number.isNaN(date.getTime())
+        ? "Unknown"
+        : date.toLocaleString();
+};
+
 function DashboardPage() {
     const navigate = useNavigate();
 
@@ -408,6 +419,10 @@ function DashboardPage() {
                                         </th>
 
                                         <th>
+                                            Last Login
+                                        </th>
+
+                                        <th>
                                             Actions
                                         </th>
                                     </tr>
@@ -438,6 +453,10 @@ function DashboardPage() {
 
                                             <td>
                                                 {student.phone_number}
+                                            </td>
+
+                                            <td>
+                                                {formatLastLogin(student.last_login_at)}
                                             </td>
 
                                             <td>

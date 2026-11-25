@@ -42,15 +42,17 @@ const getAllStudents = async () => {
     const [rows] = await pool.execute(
         `SELECT
             student_id,
-            user_id,
+            students.user_id,
             registration_no,
             first_name,
             last_name,
             email,
             phone_number,
-            created_at,
-            updated_at
+            users.last_login_at,
+            students.created_at,
+            students.updated_at
         FROM students
+        INNER JOIN users ON users.user_id = students.user_id
         ORDER BY student_id DESC`
     );
 

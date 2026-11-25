@@ -198,6 +198,10 @@ The command will ask for the MySQL password.
 
 Alternatively, open `schema.sql` using MySQL Workbench and execute the script.
 
+For a database created before last-login tracking was added, run
+`migrations/20261125_add_last_login_at.sql` once before starting the updated
+backend. New databases receive the column from `schema.sql`.
+
 ---
 
 ## 11. Load Initial Data

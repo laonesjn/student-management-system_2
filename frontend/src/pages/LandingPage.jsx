@@ -34,12 +34,12 @@ function LandingPage() {
                         <div className="hero-content">
 
                             <span className="hero-badge">
-                                ABC Institute
+                                UCJ
                             </span>
 
                             <h1>
-                                University College of 
-                                <span> Jaffna</span>
+                                Student Management 
+                                <span> System</span>
                             </h1>
 
                             <p>
