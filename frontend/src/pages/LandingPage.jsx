@@ -38,8 +38,8 @@ function LandingPage() {
                             </span>
 
                             <h1>
-                                Student Management
-                                <span> System</span>
+                                University College of 
+                                <span> Jaffna</span>
                             </h1>
 
                             <p>
